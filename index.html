@@ -3,28 +3,53 @@
 <head>
     <meta charset="utf-8">
     <title>Nerds дизайн-студия</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="container  container_color_grey">
     <header class="main-header">
-        <a class="main-logo">
-            <img src="http://lorempixel.com/160/65/cats" alt="Логотип студии Nerds" width="160" height="65">
-        </a>
-        <nav class="main-nav">
-            <a href="">Студия</a>
-            <a href="">Клиенты</a>
-            <a href="">Магазин</a>
-            <a href="">Контакты</a>
-        </nav>
-        <section class="cart">
-            <a href="">Корзина</a>
-        </section>
+        <div class="main-header__top">
+            <a class="main-logo">
+                <img src="http://lorempixel.com/160/65/cats" alt="Логотип студии Nerds" width="160" height="65">
+            </a>
+            <nav class="main-nav">
+                <a href="">Студия</a>
+                <a href="">Клиенты</a>
+                <a href="">Магазин</a>
+                <a href="">Контакты</a>
+            </nav>
+            <section class="cart">
+                <a href="">Корзина</a>
+            </section>
+        </div>
         <section class="promo-slider">
             <article class="promo-slider__slide">
+                <h2>
+                    Долго, дорого, скрупулезно.
+                </h2>
+                <p>
+                    Математически выверенный дизайн для вашего сайта или мобильного приложения.
+                </p>
+                <a class="btn  promo-slider__btn" href="">Узнать больше</a>
             </article>
-            <article class="promo-slider__slide">
+            <article class="promo-slider__slide  hidden">
+                <h2>
+                    Любим математику как никто другой
+                </h2>
+                <p>
+                    Никакого креатива, только математические формулы для расчета идеальных пропорций.
+                </p>
+                <a class="btn  promo-slider__btn" href="">Узнать больше</a>
             </article>
-            <article class="promo-slider__slide">
+            <article class="promo-slider__slide  hidden">
+                <h2>
+                    Только ночь, только хардкор
+                </h2>
+                <p>
+                    Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
+                </p>
+                <a class="btn  promo-slider__btn" href="">Узнать больше</a>
             </article>
         </section>
     </header>
@@ -89,22 +114,22 @@
             <img src="http://lorempixel.com/173/84/cats" alt="Логотип сайта Mishka" width="173" height="84">
         </a>
     </section>
-    <section class="map">
-        <section class="contacts">
-            <h4>
-                Nёrds design studio
-            </h4>
-            <p>
-                191186, Санкт-Петербург,
-                ул. Б. Конюшенная, д. 19/8
-            </p>
-            <p>
-                тел. +7 (812) 275-75-75
-            </p>
-            <a class="btn  contacts__btn" href="">Напишите нам</a>
-        </section>
-    </section>
 </main>
+<section class="map">
+    <section class="contacts">
+        <h4>
+            Nёrds design studio
+        </h4>
+        <p>
+            191186, Санкт-Петербург,
+            ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p>
+            тел. +7 (812) 275-75-75
+        </p>
+        <a class="btn  contacts__btn" href="">Напишите нам</a>
+    </section>
+</section>
 <footer class="main-footer">
     <section class="social">
         <div class="social__links">
@@ -135,7 +160,7 @@
     <span class="closing-btn"></span>
     <form class="write-us__form">
         <label for="user-name">Ваше имя:</label>
-        <input id="user-name" name="user-name "type="text">
+        <input id="user-name" name="user-name" type="text">
         <label for="user-email">Ваш e-mail:</label>
         <input id="user-email" name="user-email" type="email">
         <label for="user-message">Текст письма:</label>

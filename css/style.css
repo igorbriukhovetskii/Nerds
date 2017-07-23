@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*Стили для крупных элементов сетки*/
+.container {
+    width: 100%;
+}
+
+.main-header,
+.main-content,
+.main-footer {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 1px 20px;
+    outline: 1px solid red;
+}
+
+.main-header__top {
+    display: flex;
+    min-height: 132px;
+    outline: 2px solid green;
+}
+
+.promo-slider {
+    padding-top: 5px;
+    min-height: 413px;
+    outline: 2px solid green;
+}
+
+.advantages {
+    min-height: 509px;
+    outline: 2px solid green;
+}
+
+.about-studio {
+    display: flex;
+    min-height: 527px;
+    outline: 2px solid green;
+}
+
+.our-partners {
+    min-height: 182px;
+    outline: 2px solid green;
+}
+
+.map {
+    margin-top: 80px;
+    min-height: 416px;
+    width: 100%;
+    outline: 2px solid green;
+}
+
+.social {
+    min-height: 217px;
+    outline: 2px solid green;
+}
+
+.main-header__bottom {
+    padding-top: 5px;
+    min-height: 223px;
+    outline: 2px solid green;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog__left-column {
+    width: 260px;
+    outline: 3px solid blue;
+}
+
+.catalog__right-column {
+    width: 760px;
+    outline: 3px solid blue;
+}
+
+
+
+.showcase {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal,
+.hidden {
+    display: none;
+}
