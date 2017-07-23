@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
@@ -7,9 +7,9 @@
 <body>
 <div class="container  container_color_grey">
     <header class="main-header">
-        <section class="main-logo">
+        <a class="main-logo">
             <img src="http://lorempixel.com/160/65/cats" alt="Логотип студии Nerds" width="160" height="65">
-        </section>
+        </a>
         <nav class="main-nav">
             <a href="">Студия</a>
             <a href="">Клиенты</a>
@@ -29,7 +29,7 @@
         </section>
     </header>
 </div>
-<main>
+<main class="main-content">
     <section class="advantages">
         <article class="advantages__item">
         </article>
@@ -101,13 +101,11 @@
             <p>
                 тел. +7 (812) 275-75-75
             </p>
-            <div class="btn  contacts__btn">
-
-            </div>
+            <a class="btn  contacts__btn" href="">Напишите нам</a>
         </section>
     </section>
 </main>
-<footer>
+<footer class="main-footer">
     <section class="social">
         <div class="social__links">
             <span>
@@ -130,5 +128,20 @@
         </div>
     </section>
 </footer>
+<section class="write-us  modal">
+    <h2>
+        Напишите нам
+    </h2>
+    <span class="closing-btn"></span>
+    <form class="write-us__form">
+        <label for="user-name">Ваше имя:</label>
+        <input id="user-name" name="user-name "type="text">
+        <label for="user-email">Ваш e-mail:</label>
+        <input id="user-email" name="user-email" type="email">
+        <label for="user-message">Текст письма:</label>
+        <textarea id="user-message" name="user-message" placeholder="В свободной форме"></textarea>
+        <button class="btn  write-us__btn" type="submit">Отправить</button>
+    </form>
+</section>
 </body>
 </html>
