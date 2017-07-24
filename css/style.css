@@ -1,5 +1,12 @@
 * {
     box-sizing: border-box;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1,
@@ -12,6 +19,10 @@ h4 {
 /*Стили для крупных элементов сетки*/
 .container {
     width: 100%;
+}
+
+.container_bgr-color_grey {
+    background-color: #eee;
 }
 
 .main-header,
@@ -31,12 +42,6 @@ h4 {
     display: flex;
     justify-content: space-between;
     min-height: 2217px;
-}
-
-.main-header__top {
-    display: flex;
-    min-height: 132px;
-    outline: 2px solid green;
 }
 
 .promo-slider {
@@ -103,4 +108,53 @@ h4 {
 .modal,
 .hidden {
     display: none;
+}
+
+/*Стили для главного хедера*/
+.main-header__top {
+    display: flex;
+    min-height: 132px;
+}
+
+/*Главное навигационное меню*/
+.main-nav {
+    margin-top: 48px;
+    margin-left: 200px;
+    width: 500px;
+    min-height: 84px;
+}
+
+/*Ссылки главного навигационного меню*/
+.main-nav__control {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.875;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 43px;
+    margin-top: 26px;
+}
+
+/*Логотип студии*/
+.main-logo {
+    margin-top: 48px;
+}
+
+/*Корзина*/
+.cart {
+    width: 156px;
+    min-height: 84px;
+    text-transform: uppercase;
+    margin-top: 48px;
+    font-size: 16px;
+    line-height: 1.875;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+/*Ссылка корзины*/
+.cart__control {
+    display: inline-block;
+    margin-top: 26px;
+    margin-left: 82px;
 }
