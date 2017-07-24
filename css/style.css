@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
 
 /*Стили для крупных элементов сетки*/
 .container {
@@ -17,6 +23,16 @@
     outline: 1px solid red;
 }
 
+.main-content_page-name_index {
+    margin-bottom: 80px;
+}
+
+.main-content_page-name_catalog {
+    display: flex;
+    justify-content: space-between;
+    min-height: 2217px;
+}
+
 .main-header__top {
     display: flex;
     min-height: 132px;
@@ -24,7 +40,6 @@
 }
 
 .promo-slider {
-    padding-top: 5px;
     min-height: 413px;
     outline: 2px solid green;
 }
@@ -46,7 +61,6 @@
 }
 
 .map {
-    margin-top: 80px;
     min-height: 416px;
     width: 100%;
     outline: 2px solid green;
@@ -58,31 +72,32 @@
 }
 
 .main-header__bottom {
-    padding-top: 5px;
+    padding: 5px;
     min-height: 223px;
     outline: 2px solid green;
 }
 
-.catalog {
-    display: flex;
-    justify-content: space-between;
-}
-
-.catalog__left-column {
+.main-content__left-column {
     width: 260px;
     outline: 3px solid blue;
 }
 
-.catalog__right-column {
+.main-content__right-column {
     width: 760px;
     outline: 3px solid blue;
 }
 
-
+.sort-view {
+    display: flex;
+}
 
 .showcase {
     display: flex;
     flex-wrap: wrap;
+}
+
+.buy-item {
+    display: none;
 }
 
 .modal,
