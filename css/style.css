@@ -44,11 +44,6 @@ h4 {
     min-height: 2217px;
 }
 
-.promo-slider {
-    min-height: 413px;
-    outline: 2px solid green;
-}
-
 .advantages {
     min-height: 509px;
     outline: 2px solid green;
@@ -113,7 +108,7 @@ h4 {
 /*Стили для главного хедера*/
 .main-header__top {
     display: flex;
-    min-height: 132px;
+    min-height: 115px;
 }
 
 /*Главное навигационное меню*/
@@ -121,7 +116,7 @@ h4 {
     margin-top: 48px;
     margin-left: 200px;
     width: 500px;
-    min-height: 84px;
+    min-height: 64px;
 }
 
 /*Ссылки главного навигационного меню*/
@@ -133,17 +128,22 @@ h4 {
     font-weight: 500;
     margin-right: 43px;
     margin-top: 26px;
+    vertical-align: middle;
 }
 
 /*Логотип студии*/
 .main-logo {
     margin-top: 48px;
+    display: inline-block;
+    min-height: 65px;
+    font-size: 0;
+    vertical-align: middle
 }
 
 /*Корзина*/
 .cart {
     width: 156px;
-    min-height: 84px;
+    min-height: 64px;
     text-transform: uppercase;
     margin-top: 48px;
     font-size: 16px;
@@ -157,4 +157,42 @@ h4 {
     display: inline-block;
     margin-top: 26px;
     margin-left: 82px;
+}
+
+/*Слайдер промоблока главной страницы*/
+.promo-slider {
+    min-height: 429px;
+}
+
+.promo-slider__slide {
+    min-height: 429px;
+}
+
+/*Заголовок слайдера*/
+.promo-slider__header {
+    font-size: 55px;
+    line-height: 1;
+    font-weight: 500;
+    width: 520px;
+    padding-top: 76px;
+}
+
+/*Абзац текста в промослайдере*/
+.promo-slider__paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    width: 420px;
+    padding-top: 10px;
+}
+
+.promo-slider__slide_number_1 {
+    background: #eee url("../img/backgrounds/slide1.png") 431px -1px no-repeat;
+}
+
+.promo-slider__slide_number_2 {
+    background: #eee url("../img/backgrounds/slide2.png") right no-repeat;
+}
+.promo-slider__slide_number_3 {
+    background: #eee url("../img/backgrounds/slide3.png") bottom right no-repeat;
 }
