@@ -9,6 +9,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    min-width: 1200px;
+}
+
 h1,
 h2,
 h3,
@@ -18,36 +22,26 @@ h4 {
 
 /*Стили для крупных элементов сетки*/
 .container {
-    width: 100%;
+    width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    min-height: 2217px;
 }
 
 .container_bgr-color_grey {
     background-color: #eee;
 }
 
-.main-header,
-.main-content,
 .main-footer {
     width: 1200px;
     margin: 0 auto;
-    padding: 1px 20px;
+
     outline: 1px solid red;
-}
-
-.main-content_page-name_index {
-    margin-bottom: 80px;
-}
-
-.main-content_page-name_catalog {
-    display: flex;
-    justify-content: space-between;
-    min-height: 2217px;
-}
-
-.map {
-    min-height: 416px;
-    width: 100%;
-    outline: 2px solid green;
 }
 
 .social {
@@ -61,12 +55,12 @@ h4 {
     outline: 2px solid green;
 }
 
-.main-content__left-column {
+.catalog__left-column {
     width: 260px;
     outline: 3px solid blue;
 }
 
-.main-content__right-column {
+.catalog__right-column {
     width: 760px;
     outline: 3px solid blue;
 }
@@ -90,6 +84,11 @@ h4 {
 }
 
 /*Стили для главного хедера*/
+.main-header {
+    background-color: #eee;
+    width: 100%;
+}
+
 .main-header__top {
     display: flex;
     min-height: 115px;
@@ -97,7 +96,7 @@ h4 {
 
 /*Главное навигационное меню*/
 .main-nav {
-    margin-top: 48px;
+    margin-top: 49px;
     margin-left: 200px;
     width: 500px;
     min-height: 64px;
@@ -117,7 +116,7 @@ h4 {
 
 /*Логотип студии*/
 .main-logo {
-    margin-top: 48px;
+    margin-top: 49px;
     display: inline-block;
     min-height: 65px;
     font-size: 0;
@@ -129,7 +128,7 @@ h4 {
     width: 156px;
     min-height: 64px;
     text-transform: uppercase;
-    margin-top: 48px;
+    margin-top: 49px;
     font-size: 16px;
     line-height: 1.875;
     font-weight: 500;
@@ -145,7 +144,7 @@ h4 {
 
 /*Слайдер промоблока главной страницы*/
 .promo-slider {
-    min-height: 429px;
+    min-height: 430px;
 }
 
 .promo-slider__slide {
@@ -158,7 +157,7 @@ h4 {
     line-height: 1;
     font-weight: 500;
     width: 520px;
-    padding-top: 76px;
+    padding-top: 77px;
 }
 
 /*Абзац текста в промослайдере*/
@@ -172,11 +171,11 @@ h4 {
 }
 
 .promo-slider__slide_number_1 {
-    background: #eee url("../img/backgrounds/slide1.png") 431px -1px no-repeat;
+    background: #eee url("../img/backgrounds/slide1.png") 431px bottom no-repeat;
 }
 
 .promo-slider__slide_number_2 {
-    background: #eee url("../img/backgrounds/slide2.png") right no-repeat;
+    background: #eee url("../img/backgrounds/slide2.png") 496px 0 no-repeat;
 }
 .promo-slider__slide_number_3 {
     background: #eee url("../img/backgrounds/slide3.png") bottom right no-repeat;
@@ -187,7 +186,7 @@ h4 {
     position: relative;
     display: flex;
     align-items: flex-start;
-    margin-top: 78px;
+    margin-top: 80px;
     flex-wrap: wrap;
     min-height: 429px;
 }
@@ -207,7 +206,7 @@ h4 {
     font-size: 24px;
     line-height: 1.25;
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: 21px;
 }
 
 .advantages__paragraph {
@@ -333,6 +332,7 @@ h4 {
     display: inline-block;
     font-size: 0;
     vertical-align: top;
+    position: relative;
 }
 
 .our-partners__partner-link_number_1 {
@@ -353,6 +353,89 @@ h4 {
     margin-top: 7px;
     margin-left: 117px;
 }
+
+/*Декоративные полоски между ссылками в блоке "Наши партнёры"*/
+.our-partners__partner-link::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 52px;
+    background-color: #efefef;
+}
+
+.our-partners__partner-link_number_1::after {
+    top: 3px;
+    right: -51px;
+}
+
+.our-partners__partner-link_number_2::after {
+    top: 16px;
+    right: -46px;
+}
+
+.our-partners__partner-link_number_3::after {
+    top: 1px;
+    right: -58px;
+}
+
+.our-partners__partner-link_number_4::after {
+    width: 0;
+    height: 0;
+}
+
+/*Блок карты*/
+.map {
+    min-height: 416px;
+    width: 100%;
+    outline: 2px solid green;
+    background: #f2f0e9 url("../img/map/map-bgr.jpg") center no-repeat;
+}
+
+.map_page-name_index {
+    margin-top: 80px;
+}
+
+.contacts {
+    position: relative;
+}
+
+.contacts__wrapper {
+    position: absolute;
+    width: 319px;
+    min-height: 308px;
+    top: 54px;
+    left: 20px;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.contacts__header {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.667;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-top: 49px;
+}
+
+.contacts__paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.125;
+    color: #666666;
+    padding-left: 51px;
+    width: 260px;
+}
+
+.contacts__paragraph_address {
+    padding-top: 7px;
+}
+
+.contacts__paragraph_tel {
+    padding-top: 2px;
+}
+
 /*Декоративная полоска после блоков на главной странице*/
 .advantages::after,
 .about-studio::after,

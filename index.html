@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="container  container_bgr-color_grey">
-    <header class="main-header">
+<header class="main-header">
+    <div class="container  container_bgr-color_grey">
         <div class="main-header__top">
             <a class="main-logo">
                 <img src="img/nerds-logo-png.png" alt="Логотип студии Nerds" width="160" height="65">
@@ -17,7 +17,7 @@
             <nav class="main-nav">
                 <a class="main-nav__control" href="#">Студия</a>
                 <a class="main-nav__control" href="#">Клиенты</a>
-                <a class="main-nav__control" href="#">Магазин</a>
+                <a class="main-nav__control" href="catalog.html">Магазин</a>
                 <a class="main-nav__control" href="#">Контакты</a>
             </nav>
             <section class="cart">
@@ -25,7 +25,7 @@
             </section>
         </div>
         <section class="promo-slider">
-            <article class="promo-slider__slide  promo-slider__slide_number_1   hidden">
+            <article class="promo-slider__slide  promo-slider__slide_number_1">
                 <h3 class="promo-slider__header">
                     Долго, дорого, скрупулезно.
                 </h3>
@@ -43,7 +43,7 @@
                 </p>
                 <a class="btn  promo-slider__btn" href="">Узнать больше</a>
             </article>
-            <article class="promo-slider__slide  promo-slider__slide_number_3">
+            <article class="promo-slider__slide  promo-slider__slide_number_3   hidden">
                 <h3 class="promo-slider__header">
                     Только ночь, только хардкор
                 </h3>
@@ -53,9 +53,9 @@
                 <a class="btn  promo-slider__btn" href="">Узнать больше</a>
             </article>
         </section>
-    </header>
-</div>
-<main class="main-content  main-content_page-name_index">
+    </div>
+</header>
+<main class="container">
     <section class="advantages">
         <article class="advantages__item">
             <img src="img/notebook.jpg" alt="Веб-сайты">
@@ -140,19 +140,21 @@
         </a>
     </section>
 </main>
-<section class="map">
-    <section class="contacts">
-        <h4>
-            Nёrds design studio
-        </h4>
-        <p>
-            191186, Санкт-Петербург,
-            ул. Б. Конюшенная, д. 19/8
-        </p>
-        <p>
-            тел. +7 (812) 275-75-75
-        </p>
-        <a class="btn  contacts__btn" href="">Напишите нам</a>
+<section class="map  map_page-name_index" id="map">
+    <section class="contacts  container">
+        <div class="contacts__wrapper">
+            <h3 class="contacts__header">
+                Nёrds design studio
+            </h3>
+            <p class="contacts__paragraph  contacts__paragraph_address">
+                191186, Санкт-Петербург,
+                ул. Б. Конюшенная, д. 19/8
+            </p>
+            <p class="contacts__paragraph  contacts__paragraph_tel">
+                тел. +7 (812) 275-75-75
+            </p>
+            <a class="btn  contacts__btn" href="">Напишите нам</a>
+        </div>
     </section>
 </section>
 <footer class="main-footer">
@@ -193,5 +195,7 @@
         <button class="btn  write-us__btn" type="submit">Отправить</button>
     </form>
 </section>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
