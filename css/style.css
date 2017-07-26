@@ -44,11 +44,6 @@ h4 {
     min-height: 2217px;
 }
 
-.our-partners {
-    min-height: 182px;
-    outline: 2px solid green;
-}
-
 .map {
     min-height: 416px;
     width: 100%;
@@ -253,7 +248,6 @@ h4 {
 }
 
 .about-studio__list-header {
-    display: inline-block;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 700;
@@ -328,9 +322,42 @@ h4 {
     padding-top: 35px;
 }
 
+/*Блок "Наши партнёры на главной странице"*/
+.our-partners {
+    position: relative;
+    min-height: 137px;
+    margin-top: 45px;
+}
+
+.our-partners__partner-link {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.our-partners__partner-link_number_1 {
+    margin-top: 17px;
+    margin-left: 31px;
+}
+
+.our-partners__partner-link_number_2 {
+    margin-left: 94px;
+}
+
+.our-partners__partner-link_number_3 {
+    margin-top: 20px;
+    margin-left: 98px;
+}
+
+.our-partners__partner-link_number_4 {
+    margin-top: 7px;
+    margin-left: 117px;
+}
 /*Декоративная полоска после блоков на главной странице*/
 .advantages::after,
-.about-studio::after {
+.about-studio::after,
+.our-partners::after {
+    display: block;
     position: absolute;
     content: "";
     bottom: 0;
