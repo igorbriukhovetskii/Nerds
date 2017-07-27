@@ -37,18 +37,6 @@ h4 {
     background-color: #eee;
 }
 
-.main-footer {
-    width: 1200px;
-    margin: 0 auto;
-
-    outline: 1px solid red;
-}
-
-.social {
-    min-height: 217px;
-    outline: 2px solid green;
-}
-
 .main-header__bottom {
     padding: 5px;
     min-height: 223px;
@@ -335,6 +323,18 @@ h4 {
     position: relative;
 }
 
+.our-partners__partner-logo {
+    opacity: 0.2;
+}
+
+.our-partners__partner-logo:hover {
+    opacity: 1;
+}
+
+.our-partners__partner-logo:active {
+    opacity: 0.1;
+}
+
 .our-partners__partner-link_number_1 {
     margin-top: 17px;
     margin-left: 31px;
@@ -389,7 +389,7 @@ h4 {
     min-height: 416px;
     width: 100%;
     outline: 2px solid green;
-    background: #f2f0e9 url("../img/map/map-bgr.jpg") center no-repeat;
+    background: #eae6dd url("../img/map/map-bgr.jpg") center no-repeat;
 }
 
 .map_page-name_index {
@@ -434,6 +434,89 @@ h4 {
 
 .contacts__paragraph_tel {
     padding-top: 2px;
+}
+
+
+/*Футер*/
+.social {
+    display: flex;
+    justify-content: space-between;
+    min-height: 217px;
+}
+
+.social__links {
+    margin-top: 69px;
+}
+
+.social__link {
+    font-size: 0;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 78px;
+    height: 78px;
+    vertical-align: top;
+}
+
+.social__icon {
+    font-size: 0;
+    display: inline-block;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: #e1e1e1 url("../img/icons/spritesheet.png") no-repeat;
+}
+
+.social__icon:hover {
+    background-color: #e74246;
+}
+
+.social__icon:active {
+    background-color: #d7373b;
+}
+
+.social__icon_vk {
+    background-position: -554px 2px;
+}
+
+.social__icon_vk:active {
+    background-position: -640px 2px;
+}
+
+.social__icon_facebook {
+    background-position: -242px -2px;
+}
+
+.social__icon_facebook:active {
+    background-position: -314px -2px;
+}
+
+.social__icon_instagram {
+    background-position: -390px -1px;
+}
+
+.social__icon_instagram:active {
+    background-position: -471px -1px;
+}
+
+.social__text {
+    margin-right: 218px;
+    margin-top: 75px;
+}
+
+.social__header {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.social__paragraph {
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 400;
+    color: #444;
+    margin-top: 11px;
 }
 
 /*Декоративная полоска после блоков на главной странице*/
