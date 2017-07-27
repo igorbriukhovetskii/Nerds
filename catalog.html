@@ -14,9 +14,9 @@
                 <img src="img/nerds-logo-png.png" alt="Логотип студии Nerds" width="160" height="65">
             </a>
             <nav class="main-nav">
-                <a class="main-nav__control" href="#">Студия</a>
+                <a class="main-nav__control" href="index.html">Студия</a>
                 <a class="main-nav__control" href="#">Клиенты</a>
-                <a class="main-nav__control" href="#">Магазин</a>
+                <a class="main-nav__control  active">Магазин</a>
                 <a class="main-nav__control" href="#">Контакты</a>
             </nav>
             <section class="cart">
@@ -24,7 +24,7 @@
             </section>
         </div>
         <div class="main-header__bottom">
-            <h1>Магазин готовых шаблонов</h1>
+            <h1 class="catalog__main-heading">Магазин готовых шаблонов</h1>
         </div>
     </div>
 </header>
@@ -175,24 +175,24 @@
         </div>
     </section>
 </section>
-<footer class="main-footer">
-    <section class="social">
+<footer class="container">
+    <section class="social" id="social">
         <div class="social__links">
-            <span>
-                <a href="https://vk.com" title="Наша страница ВКонтакте">Мы ВКонтакте</a>
+            <span class="social__link">
+                <a class="social__icon social__icon_vk" href="#social" title="Наша страница ВКонтакте">Мы ВКонтакте</a>
             </span>
-            <span>
-                <a href="https://facebook.com" title="Наша страница в Facebook">Мы в Facebook</a>
+            <span class="social__link">
+                <a class="social__icon  social__icon_facebook" href="#social" title="Наша страница в Facebook">Мы в Facebook</a>
             </span>
-            <span>
-                <a href="https://instagram.com" title="Наш Инстаграм">Мы в Инстаграм</a>
+            <span class="social__link">
+                <a class="social__icon  social__icon_instagram" href="#social" title="Наш Инстаграм">Мы в Инстаграм</a>
             </span>
         </div>
         <div class="social__text">
-            <h4>
+            <h4 class="social__heading">
                 Давайте дружить, это выгодно!
             </h4>
-            <p>
+            <p class="social__paragraph">
                 Скидка 10% для друзей из социальных сетей.
             </p>
         </div>
