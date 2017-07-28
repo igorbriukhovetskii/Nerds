@@ -27,19 +27,8 @@ h4 {
     margin: 0 auto;
 }
 
-.catalog {
-    display: flex;
-    justify-content: space-between;
-    min-height: 2217px;
-}
-
 .container_bgr-color_grey {
     background-color: #eee;
-}
-
-.catalog__left-column {
-    width: 260px;
-    outline: 3px solid blue;
 }
 
 .catalog__right-column {
@@ -490,6 +479,274 @@ h4 {
     line-height: 1;
     padding-top: 77px;
     text-align: center;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+    min-height: 2217px;
+}
+
+.catalog__left-column {
+    width: 260px;
+    outline: 3px solid blue;
+}
+
+/*Фильтр продуктов* в каталоге*/
+.filter__heading {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.667;
+    text-transform: uppercase;
+}
+
+/*Слайдер*/
+.range-slider {
+    margin-top: 48px;
+}
+
+.range-slider__field {
+    width: 260px;
+    height: 80px;
+    background-color: #eee;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.range-slider__track {
+    width: 219px;
+    height: 2px;
+    position: absolute;
+    left: 20px;
+    background-color: #d7dcde;
+    display: block;
+}
+
+.range-slider__fill {
+    display: block;
+    width: 150px;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00cb75;
+}
+
+.range-slider__handle {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0;
+    top: -9px;
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 0 0 #cdcdcd;
+}
+
+.range-slider__handle::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    top: 8px;
+    left: 8px;
+    z-index: 20;
+    background-color: #acacac;
+}
+
+.range-slider__handle_min {
+    left: 0;
+}
+
+.range-slider__handle_max {
+    left: 64%;
+}
+
+.range-slider__price-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.range-slider__price-field {
+    width: 80px;
+    height: 38px;
+    background-color: #eee;
+    outline: none;
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+    padding-left: 12px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.375;
+    color: #283136;
+}
+
+.range-slider__price-field:hover {
+    border-color: #b4b9bb;
+    color: #444444;
+}
+
+.range-slider__price-field:focus {
+    border-color: #000;
+    color: #444444;
+}
+
+.range-slider__field-label {
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #283136;
+}
+
+.range-slider__price-field:first-of-type {
+    margin-right: 19px;
+}
+
+/*Выбор сетки для макета в каталоге*/
+.filter__layout-select {
+    margin-top: 54px;
+}
+
+.filter__layouts-set {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11px;
+    padding-left: 36px;
+    padding-top: 5px;
+}
+
+.radiobutton-label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.radiobutton-label:hover {
+    opacity: 1;
+}
+
+.radiobutton-label:disabled {
+    opacity: 0.1;
+}
+
+.filter__radiobutton-label {
+    margin-bottom: 20px;
+    color: #283136;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.radiobutton-label::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border: 3px solid #4c4c4c;
+    border-radius: 50%;
+    opacity: 0.4;
+    left: -34px;
+    top: -2px;
+}
+
+.radiobutton-label::after {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #4c4c4c;
+    opacity: 0.4;
+}
+
+.radiobutton-label:hover::before,
+.radiobutton[id*="adaptive"]:checked ~ .filter__radiobutton-label[for*="adaptive"]:hover::after,
+.radiobutton[id*="fixed"]:checked ~ .filter__radiobutton-label[for*="fixed"]:hover::after,
+.radiobutton[id*="fluid"]:checked ~ .filter__radiobutton-label[for*="fluid"]:hover::after {
+    opacity: 1;
+}
+
+.radiobutton[id*="adaptive"]:checked ~ .filter__radiobutton-label[for*="adaptive"]::after,
+.radiobutton[id*="fixed"]:checked ~ .filter__radiobutton-label[for*="fixed"]::after,
+.radiobutton[id*="fluid"]:checked ~ .filter__radiobutton-label[for*="fluid"]::after {
+    display: block;
+    left: -26px;
+    top: 6px;
+}
+
+.radiobutton {
+    display: none;
+}
+
+/*Выбор особенностей макета в каталоге*/
+.filter__features-select {
+    margin-top: 25px;
+}
+
+.filter__features-set {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    padding-left: 36px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-label::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 27px;
+    height: 23px;
+    left: -36px;
+    top: -2px;
+    background: transparent url("../img/icons/spritesheet.png") -104px -30px no-repeat;
+    opacity: 0.4;
+}
+
+.checkbox-label:hover::after {
+    opacity: 1;
+}
+
+.checkbox-label:disabled::after {
+    opacity: 0.1;
+}
+
+.filter__checkbox-label {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #283136;
+    margin-bottom: 20px;
+}
+
+.checkbox[id*="slider"]:checked ~ .checkbox-label[for*="slider"]::after,
+.checkbox[id*="advantages"]:checked ~ .checkbox-label[for*="advantages"]::after,
+.checkbox[id*="news"]:checked ~ .checkbox-label[for*="news"]::after,
+.checkbox[id*="gallery"]:checked ~ .checkbox-label[for*="gallery"]::after,
+.checkbox[id*="cart"]:checked ~ .checkbox-label[for*="cart"]::after {
+    background: transparent url("../img/icons/spritesheet.png") -187px -30px no-repeat;
 }
 
 /*Футер*/

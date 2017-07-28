@@ -31,30 +31,49 @@
 <main class="catalog  container">
     <div class="catalog__left-column">
         <form class="filter">
-            <h2>Стоимость:</h2>
+            <h2 class="filter__heading">Стоимость:</h2>
             <section class="range-slider" id="price-slider">
+                <div class="range-slider__field">
+                    <div class="range-slider__track" id="slider-track">
+                        <span class="range-slider__handle  range-slider__handle_min" id="min-handle"></span>
+                        <span class="range-slider__fill"></span>
+                        <span class="range-slider__handle  range-slider__handle_max" id="max-handle"></span>
+                    </div>
+                </div>
+                <div class="range-slider__price-input">
+                    <label class="range-slider__field-label" for="min-price">От</label>
+                    <input class="range-slider__price-field" type="number" id="min-price" name="min-price-value"
+                           value="0" min="0">
+                    <label class="range-slider__field-label" for="max-price">До</label>
+                    <input class="range-slider__price-field" type="number" id="max-price" name="max-price-value"
+                           value="15000" max="20000">
+                </div>
             </section>
-            <section class="filter__price-filter">
-                <h2>Сетка:</h2>
-                <label for="adaptive-layout">Адаптивная</label>
-                <input id="adaptive-layout" type="radio" name="layout-type">
-                <label for="fixed-layout">Фиксированная</label>
-                <input id="fixed-layout" type="radio" name="layout-type">
-                <label for="fluid-layout">Резиновая</label>
-                <input id="fluid-layout" type="radio" name="layout-type">
+            <section class="filter__layout-select">
+                <h2 class="filter__heading">Сетка:</h2>
+                <div class="filter__layouts-set">
+                    <input class="radiobutton" id="adaptive-layout" type="radio" name="layout-type" checked>
+                    <label class="radiobutton-label  filter__radiobutton-label" for="adaptive-layout">Адаптивная</label>
+                    <input class="radiobutton" id="fixed-layout" type="radio" name="layout-type">
+                    <label class="radiobutton-label  filter__radiobutton-label" for="fixed-layout">Фиксированная</label>
+                    <input class="radiobutton" id="fluid-layout" type="radio" name="layout-type">
+                    <label class="radiobutton-label  filter__radiobutton-label" for="fluid-layout">Резиновая</label>
+                </div>
             </section>
-            <section class="filter__features-filter">
-                <h2>Особенности:</h2>
-                <label for="slider-feature">Слайдер</label>
-                <input id="slider-feature" name="slider-feature" type="checkbox" checked>
-                <label for="advantages-feature">Блок преимуществ</label>
-                <input id="advantages-feature" name="advantages-feature" type="checkbox">
-                <label for="news-feature">Новости</label>
-                <input id="news-feature" name="news-feature" type="checkbox" checked>
-                <label for="gallery-feature">Галерея</label>
-                <input id="gallery-feature" name="gallery-feature" type="checkbox">
-                <label for="cart-feature">Корзина</label>
-                <input id="cart-feature" name="cart-feature" type="checkbox">
+            <section class="filter__features-select">
+                <h2 class="filter__heading">Особенности:</h2>
+                <div class="filter__features-set">
+                    <input class="checkbox" id="slider-feature" name="slider-feature" type="checkbox" checked>
+                    <label class="checkbox-label  filter__checkbox-label" for="slider-feature">Слайдер</label>
+                    <input class="checkbox" id="advantages-feature" name="advantages-feature" type="checkbox">
+                    <label class="checkbox-label  filter__checkbox-label" for="advantages-feature">Блок преимуществ</label>
+                    <input class="checkbox" id="news-feature" name="news-feature" type="checkbox" checked>
+                    <label class="checkbox-label  filter__checkbox-label" for="news-feature">Новости</label>
+                    <input class="checkbox" id="gallery-feature" name="gallery-feature" type="checkbox">
+                    <label class="checkbox-label  filter__checkbox-label" for="gallery-feature">Галерея</label>
+                    <input class="checkbox" id="cart-feature" name="cart-feature" type="checkbox">
+                    <label class="checkbox-label  filter__checkbox-label"for="cart-feature">Корзина</label>
+                </div>
             </section>
             <button class="btn  filter__btn" type="submit">Показать</button>
         </form>
@@ -198,6 +217,8 @@
         </div>
     </section>
 </footer>
+<script src="js/range-slider.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
 <section class="write-us  modal">
     <h2>
         Напишите нам
