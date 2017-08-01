@@ -36,15 +36,6 @@ h4 {
     outline: 3px solid blue;
 }
 
-.sort-view {
-    display: flex;
-}
-
-.showcase {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .buy-item {
     display: none;
 }
@@ -99,7 +90,7 @@ h4 {
     color: #000;
 }
 
-.active {
+.main-nav__control_active {
     border-bottom: 2px solid #fb565a;
 }
 
@@ -748,6 +739,182 @@ h4 {
 .checkbox[id*="cart"]:checked ~ .checkbox-label[for*="cart"]::after {
     background: transparent url("../img/icons/spritesheet.png") -187px -30px no-repeat;
 }
+
+/*Сортировка макетов на витрине каталога*/
+.sort-view {
+    display: flex;
+}
+
+.sort-view__heading {
+    line-height: 1.4;
+}
+
+.sort-view__categories-set {
+    display: flex;
+    list-style: none;
+    margin-top: 5px;
+    margin-left: 240px;
+    padding: 0;
+}
+
+.sort-view__category {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.285;
+    text-transform: uppercase;
+    padding: 0;
+    margin-left: 26px;
+    opacity: 0.3;
+}
+
+.sort-view__category:hover {
+    opacity: 0.6;
+}
+
+.sort-view__category:active {
+    opacity: 1;
+}
+
+.sort-view__category_active {
+    opacity: 1;
+}
+
+.sort-view__directions-set {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 9px;
+    margin-left: 29px;
+}
+
+.sort-view__direction {
+    font-size: 0;
+    display: block;
+    width: 9px;
+    height: 9px;
+    margin-left: 20px;
+    opacity: 0.2;
+}
+
+.sort-view__direction:hover {
+    opacity: 0.4;
+}
+
+.sort-view__direction:active {
+    opacity: 1;
+}
+
+.sort-view__direction_active {
+    opacity: 1;
+}
+
+.sort-view__direction_up {
+    background: transparent url("../img/icons/spritesheet.png") -202px -65px no-repeat;
+
+}
+
+.sort-view__direction_down {
+    background: transparent url("../img/icons/spritesheet.png") -189px -65px no-repeat;
+
+}
+
+/*Витрина макетов в каталоге*/
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.design-template__header {
+    width: 360px;
+    height: 40px;
+    opacity: 0.12;
+    background: #4c4c4c url("../img/backgrounds/showcase-header.png") no-repeat;
+}
+
+.design-template:hover .design-template__header {
+    opacity: 1;
+}
+
+.design-template {
+    height: 616px;
+    margin-bottom: 36px;
+    position: relative;
+}
+
+.design-template:nth-child(3),
+.design-template:nth-child(4) {
+    margin-bottom: 30px;
+}
+
+.design-template:hover {
+    box-shadow: #e1e1e1 0 3px 10px 3px;
+}
+
+.order-popup {
+    position: absolute;
+    background-color: #eee;
+    text-align: center;
+    display: none;
+}
+
+.design-template__order-popup {
+    width: 100%;
+    min-height: 231px;
+    bottom: 0;
+    left: 0;
+}
+
+.design-template:hover .design-template__order-popup {
+    display: block;
+}
+
+/*.design-template:nth-child(5) .design-template__order-popup,*/
+/*.design-template:nth-child(6) .design-template__order-popup {*/
+    /*bottom: -9px;*/
+/*}*/
+
+.order-popup__heading {
+    font-size: 18px;
+    line-height: 1.667;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 27px;
+    padding-right: 2px;
+}
+
+.order-popup__paragraph {
+    font-size: 16px;
+    line-height: 1.125;
+    font-weight: 400;
+    color: #666666;
+    padding: 0 30px;
+    margin-left: 2px;
+    margin-top: 15px;
+}
+
+.order-popup__paragraph span {
+    display: block;
+    color: inherit;
+}
+
+/*.showcase__buy-item {*/
+    /*width: 100%;*/
+    /*min-height: 261px;*/
+    /*background-color: #eee;*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+/*}*/
+
+/*.showcase__heading*/
+
+/*.showcase-item:hover .showcase__buy-item {*/
+    /*display: block;*/
+/*}*/
 
 /*Футер*/
 .social {

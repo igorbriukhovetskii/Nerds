@@ -18,4 +18,4 @@
 //     myMap.geoObjects.add(myPlacemark);
 // });
 
-window.slider();
+window.slider.initialize();
