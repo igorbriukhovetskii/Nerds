@@ -5,6 +5,13 @@
     color: #000;
 }
 
+button {
+    font-family: "Roboto", "Arial", sans-serif;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -31,16 +38,6 @@ h4 {
     background-color: #eee;
 }
 
-.catalog__right-column {
-    width: 760px;
-    outline: 3px solid blue;
-}
-
-.buy-item {
-    display: none;
-}
-
-.modal,
 .hidden {
     display: none;
 }
@@ -70,6 +67,7 @@ h4 {
 
 /*Ссылки главного навигационного меню*/
 .main-nav__control {
+    position: relative;
     display: inline-block;
     font-size: 16px;
     line-height: 1.875;
@@ -91,7 +89,7 @@ h4 {
 }
 
 .main-nav__control_active {
-    border-bottom: 2px solid #fb565a;
+    box-shadow: 0 2px 0 0 #fc565a;
 }
 
 .active:hover,
@@ -203,7 +201,8 @@ h4 {
     align-items: flex-start;
     margin-top: 80px;
     flex-wrap: wrap;
-    min-height: 429px;
+    /*min-height: 429px;*/
+    box-shadow: 0 2px 0 0 #eeeeee;
 }
 
 .advantages__item {
@@ -214,6 +213,7 @@ h4 {
 
 .advantages__item:last-of-type {
     margin-right: 0;
+    margin-bottom: 77px;
 }
 
 .advantages__heading {
@@ -237,9 +237,11 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 487px;
-    margin-top: 40px;
+    /*min-height: 487px;*/
+    margin-top: 42px;
+    padding-bottom: 58px;
     position: relative;
+    box-shadow: 0 2px 0 0 #eee;
 }
 
 .about-studio__our-mission {
@@ -339,8 +341,10 @@ h4 {
 /*Блок "Наши партнёры на главной странице"*/
 .our-partners {
     position: relative;
-    min-height: 137px;
-    margin-top: 45px;
+    /*min-height: 137px;*/
+    margin-top: 47px;
+    padding-bottom: 44px;
+    box-shadow: 0 2px 0 0 #eee;
 }
 
 .our-partners__partner-link {
@@ -415,12 +419,15 @@ h4 {
 .map {
     min-height: 416px;
     width: 100%;
-    outline: 2px solid green;
     background: #eae6dd url("../img/map/map-bgr.jpg") center no-repeat;
 }
 
 .map_page-name_index {
-    margin-top: 80px;
+    margin-top: 82px;
+}
+
+.map_page-name_catalog {
+    margin-top: 59px;
 }
 
 .contacts {
@@ -476,12 +483,14 @@ h4 {
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
-    min-height: 2217px;
 }
 
 .catalog__left-column {
     width: 260px;
-    outline: 3px solid blue;
+}
+
+.catalog__right-column {
+    width: 760px;
 }
 
 /*Фильтр продуктов* в каталоге*/
@@ -871,11 +880,6 @@ h4 {
     display: block;
 }
 
-/*.design-template:nth-child(5) .design-template__order-popup,*/
-/*.design-template:nth-child(6) .design-template__order-popup {*/
-    /*bottom: -9px;*/
-/*}*/
-
 .order-popup__heading {
     font-size: 18px;
     line-height: 1.667;
@@ -899,22 +903,6 @@ h4 {
     display: block;
     color: inherit;
 }
-
-/*.showcase__buy-item {*/
-    /*width: 100%;*/
-    /*min-height: 261px;*/
-    /*background-color: #eee;*/
-    /*display: none;*/
-    /*position: absolute;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-/*}*/
-
-/*.showcase__heading*/
-
-/*.showcase-item:hover .showcase__buy-item {*/
-    /*display: block;*/
-/*}*/
 
 /*Футер*/
 .social {
@@ -998,15 +986,297 @@ h4 {
     margin-top: 11px;
 }
 
-/*Декоративная полоска после блоков на главной странице*/
-.advantages::after,
-.about-studio::after,
-.our-partners::after {
+/*Пагинация*/
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+
+/*Стили для кнопок*/
+.btn {
+    font-size: 16px;
+    line-height: 1.125;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    padding: 1.09em 0 0.91em;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn_bg-color_red {
+    background-color: #fb565a;
+}
+
+.btn_bg-color_red:hover {
+    background-color: #e74246;
+}
+
+.btn_bg-color_red:active {
+    background-color: #d7373b;
+    box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.btn_bg-color_green {
+    background-color: #00cb75;
+}
+
+.btn_bg-color_green:hover {
+    background-color: #00bc6c;
+}
+
+.btn_bg-color_green:active {
+    background-color: #00aa62;
+    box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.btn_bg-color_yellow {
+    background-color: #f0c948;
+}
+
+.btn_bg-color_yellow:hover {
+    background-color: #eab534;
+}
+
+.btn_bg-color_yellow:active {
+    background-color: #e5a722;
+    box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.btn_bg-color_grey {
+    background-color: #eee;
+}
+
+.btn_text-color_white {
+    color: #fff;
+}
+
+.btn_text-color_white:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.promo-slider__btn {
+    width: 240px;
+    margin-top: 23px;
+}
+
+.advantages__btn {
+    width: 160px;
+    margin-top: 16px;
+}
+
+.filter__btn {
+    width: 260px;
+    margin-top: 29px;
+}
+
+.order-popup__btn {
+    width: 200px;
+    margin-top: 14px;
+}
+
+.contacts__btn {
+    width: 219px;
+    margin-top: 21px;
+    margin-left: 50px;
+}
+
+.write-us__btn {
+    width: 260px;
+    margin-top: 43px;
+}
+
+.closing-btn {
     display: block;
     position: absolute;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.write-us__closing-btn {
+    width: 21px;
+    height: 21px;
+    top: 78px;
+    right: 90px;
+}
+
+.closing-btn:hover {
+    opacity: 1;
+}
+
+.closing-btn:active {
+    opacity: 0.1;
+}
+
+.closing-btn::before,
+.closing-btn::after {
+    position: absolute;
+    display: block;
     content: "";
+    width: 124%;
+    height: 19%;
+    background-color: #fb565a;
+    left: 15%;
+}
+
+.closing-btn::before {
+    top: 0;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+}
+
+.closing-btn::after {
     bottom: 0;
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+}
+
+.pagination__btn {
+    width: 50px;
+    margin-right: 11px;
+}
+
+.filter__btn:hover,
+.pagination__btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filter__btn:active,
+.pagination__btn:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.pagination__btn_active,
+.pagination__btn_active:hover,
+.pagination__btn_active:active {
+    background-color: #fff;
+    border: 3px solid #dcdcdc;
+    padding-top: calc(1.09em - 3px);
+    padding-bottom: calc(0.91em - 3px);
+    color: rgba(0, 0, 0, 1);
+    cursor: default;
+}
+
+.pagination__btn_size_large {
+    width: 260px;
+}
+
+/*Стили для модальных окон*/
+.modal {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.write-us {
+    display: none;
+}
+
+.modal__inner {
+    position: fixed;
+    background-color: #fff;
+    z-index: 40;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.write-us__inner {
+    width: 960px;
+    height: 590px;
+    padding: 0 100px;
+    outline: 1px solid saddlebrown;
+    bottom: 180px;
+}
+
+.write-us__heading {
+    margin-top: 68px;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 1;
+}
+
+.write-us__form {
+    width: 760px;
+    margin-top: 42px;
+}
+
+.write-us__field-group {
     width: 100%;
-    height: 2px;
-    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.write-us__field {
+    display: inline-block;
+}
+
+.write-us__field_width_full {
+    width: 100%;
+}
+
+.write-us__field_width_half {
+    width: calc(50% - 20px);
+}
+
+.write-us__label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 0.9;
+    font-weight: 700;
+}
+
+.write-us__input {
+    margin-top: 11px;
+    width: 360px;
+    height: 50px;
+    border: 2px solid #d8dddf;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 1.125;
+    font-weight: 400;
+    color: #444444;
+    font-family: inherit;
+    opacity: 0.5;
+    padding-left: 13px;
+}
+
+.write-us__input:focus,
+.write-us__textarea:focus {
+    opacity: 1;
+    color: #000;
+    outline: none;
+    border-color: #000;
+}
+
+.write-us__input:invalid {
+    border-color: #e84045;
+    color: #e84045;
+}
+
+.write-us__textarea {
+    width: 100%;
+    height: 118px;
+    border: 2px solid #d8dddf;
+    border-radius: 3px;
+    margin-top: 11px;
+    line-height: 1.125;
+    font-weight: 400;
+    color: #444444;
+    font-family: inherit;
+    opacity: 0.5;
+    padding-left: 13px;
+    padding-top: 11px;
 }

@@ -30,7 +30,7 @@
 </header>
 <main class="catalog  container">
     <div class="catalog__left-column">
-        <form class="filter">
+        <form class="filter" action="#" method="get">
             <h2 class="filter__heading">Стоимость:</h2>
             <section class="range-slider" id="price-slider">
                 <div class="range-slider__field">
@@ -75,7 +75,7 @@
                     <label class="checkbox-label  filter__checkbox-label"for="cart-feature">Корзина</label>
                 </div>
             </section>
-            <button class="btn  filter__btn" type="submit">Показать</button>
+            <button class="btn  btn_bg-color_grey  filter__btn" type="submit">Показать</button>
         </form>
     </div>
     <div class="catalog__right-column">
@@ -110,9 +110,9 @@
                 <section class="order-popup  design-template__order-popup">
                     <h2 class="order-popup__heading">Sedona</h2>
                     <p class="order-popup__paragraph">
-                        <span>Информационный сайт<span> <span>для туристов</span>
+                        <span>Информационный сайт</span> <span>для туристов</span>
                     </p>
-                    <a class="btn  buy-link__btn">9 990 руб.</a>
+                    <a class="btn  btn_bg-color_red  btn_text-color_white  order-popup__btn">9 990 руб.</a>
                 </section>
             </article>
             <article class="design-template">
@@ -123,7 +123,7 @@
                     <p class="order-popup__paragraph">
                         <span>Продуктовый лендинг</span> <span>приложения для iOS и Android</span>
                     </p>
-                    <a class="btn  buy-item__btn">9 990 руб.</a>
+                    <a class="btn  btn_bg-color_red  btn_text-color_white  order-popup__btn">9 990 руб.</a>
                 </section>
             </article>
             <article class="design-template">
@@ -134,7 +134,7 @@
                     <p class="order-popup__paragraph">
                         <span>Сайт салоны красоты.</span> <span>Для мужчин, да.</span>
                     </p>
-                    <a class="btn  buy-item__btn">9 990 руб.</a>
+                    <a class="btn  btn_bg-color_red  btn_text-color_white  order-popup__btn">9 990 руб.</a>
                 </section>
             </article>
             <article class="design-template">
@@ -145,7 +145,7 @@
                     <p class="order-popup__paragraph">
                         <span>Интернет-магазин</span> <span>вязаных игрушек</span>
                     </p>
-                    <a class="btn  buy-item__btn">9 990 руб.</a>
+                    <a class="btn  btn_bg-color_red  btn_text-color_white  order-popup__btn">9 990 руб.</a>
                 </section>
             </article>
             <article class="design-template">
@@ -156,7 +156,7 @@
                     <p class="order-popup__paragraph">
                         Лендинг курсов повышения квалификации
                     </p>
-                    <a class="btn  buy-item__btn">9 990 руб.</a>
+                    <a class="btn  btn_bg-color_red  btn_text-color_white  order-popup__btn">9 990 руб.</a>
                 </section>
             </article>
             <article class="design-template">
@@ -167,22 +167,22 @@
                     <p class="order-popup__paragraph">
                         Промо-сайт производителя крафтового кваса
                     </p>
-                    <a class="btn  buy-item__btn">9 990 руб.</a>
+                    <a class="btn  btn_bg-color_red  btn_text-color_white  order-popup__btn">9 990 руб.</a>
                 </section>
             </article>
-            <section class="pagination">
-                <a href="" class="btn  pagination__btn">1</a>
-                <a href="" class="btn  pagination__btn">2</a>
-                <a href="" class="btn  pagination__btn">3</a>
-                <a href="" class="btn  pagination__btn">Следующая</a>
-            </section>
+            <div class="pagination" id="p">
+                <a href="#p" class="btn  btn_bg-color_grey  pagination__btn  pagination__btn_active">1</a>
+                <a href="#p" class="btn  btn_bg-color_grey  pagination__btn">2</a>
+                <a href="#p" class="btn  btn_bg-color_grey  pagination__btn">3</a>
+                <a href="#p" class="btn  pagination__btn  btn_bg-color_grey  pagination__btn_size_large">Следующая</a>
+            </div>
         </section>
     </div>
 </main>
-<section class="map  map_page-name_index" id="map">
+<section class="map  map_page-name_catalog" id="map">
     <section class="contacts  container">
         <div class="contacts__wrapper">
-            <h3 class="contacts__header">
+            <h3 class="contacts__heading">
                 Nёrds design studio
             </h3>
             <p class="contacts__paragraph  contacts__paragraph_address">
@@ -192,7 +192,7 @@
             <p class="contacts__paragraph  contacts__paragraph_tel">
                 тел. +7 (812) 275-75-75
             </p>
-            <a class="btn  contacts__btn" href="">Напишите нам</a>
+            <a class="btn  contacts__btn  btn_bg-color_red  btn_text-color_white" href="">Напишите нам</a>
         </div>
     </section>
 </section>
@@ -219,19 +219,32 @@
 </footer>
 <script src="js/range-slider.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
-<section class="write-us  modal">
-    <h2>
-        Напишите нам
-    </h2>
-    <span class="closing-btn"></span>
-    <form class="write-us__form">
-        <label for="user-name">Ваше имя:</label>
-        <input id="user-name" name="user-name "type="text">
-        <label for="user-email">Ваш e-mail:</label>
-        <input id="user-email" name="user-email" type="email">
-        <label for="user-message">Текст письма:</label>
-        <textarea id="user-message" name="user-message" placeholder="В свободной форме"></textarea>
-        <button class="btn  write-us__btn" type="submit">Отправить</button>
-    </form>
+<section class="modal  write-us">
+    <div class="modal__inner  write-us__inner">
+        <h2 class="write-us__heading">
+            Напишите нам
+        </h2>
+        <b class="closing-btn  write-us__closing-btn"></b>
+        <form class="write-us__form" action="#" method="post">
+            <div class="write-us__field-group">
+                <div class="write-us__field  write-us__field_width_half">
+                    <label class="write-us__label" for="user-name">Ваше имя:</label>
+                    <input class="write-us__input" id="user-name" name="user-name" type="text"
+                           placeholder="Представьтесь, пожалуйста">
+                </div>
+                <div class="write-us__field  write-us__field_width_half">
+                    <label class="write-us__label" for="user-email">Ваш e-mail:</label>
+                    <input class="write-us__input" id="user-email" name="user-email" type="email"
+                           placeholder="Для отправки ответа">
+                </div>
+            </div>
+            <div class="write-us__field  write-us__field_width_full">
+                <label class="write-us__label" for="user-message">Текст письма:</label>
+                <textarea class="write-us__textarea" id="user-message" name="user-message"
+                          placeholder="В свободной форме"></textarea>
+            </div>
+            <button class="btn  btn_bg-color_red  btn_text-color_white  write-us__btn" type="submit">Отправить</button>
+        </form>
+    </div>
 </section>
 </body>
