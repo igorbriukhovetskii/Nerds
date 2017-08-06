@@ -38,10 +38,6 @@ h4 {
     background-color: #eee;
 }
 
-.hidden {
-    display: none;
-}
-
 /*Стили для главного хедера*/
 .main-header {
     background-color: #eee;
@@ -88,12 +84,14 @@ h4 {
     color: #000;
 }
 
+/*Активный пункт главного навигационного меню.
+   Текущая страница сайта*/
 .main-nav__control_active {
     box-shadow: 0 2px 0 0 #fc565a;
 }
 
-.active:hover,
-.active:active {
+.main-nav__control_active:hover,
+.main-nav__control_active:active {
     color: #000;
     opacity: 1;
 }
@@ -128,6 +126,14 @@ h4 {
     position: relative;
 }
 
+/*Ссылка корзины*/
+.cart__control {
+    display: inline-block;
+    margin-top: 26px;
+    margin-left: 82px;
+}
+
+
 .cart__control::after {
     position: absolute;
     display: block;
@@ -137,13 +143,6 @@ h4 {
     top: 30px;
     left: 40px;
     background: transparent url("../img/icons/spritesheet.png") -29px -27px no-repeat;
-}
-
-/*Ссылка корзины*/
-.cart__control {
-    display: inline-block;
-    margin-top: 26px;
-    margin-left: 82px;
 }
 
 .cart__control:hover {
@@ -157,11 +156,62 @@ h4 {
 
 /*Слайдер промоблока главной страницы*/
 .promo-slider {
-    min-height: 430px;
+    display: block;
+    position: relative;
 }
 
 .promo-slider__slide {
     min-height: 429px;
+}
+
+/*Блок управления слайдером*/
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 88px;
+    height: 18px;
+    position: absolute;
+    left: 536px;
+    bottom: 96px;
+}
+
+.slider-controls__control {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls__control::after {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+}
+
+.slider-controls__radio[id="slide-1"]:checked ~ .slider-controls .slider-controls__control[for="slide-1"]::after,
+.slider-controls__radio[id="slide-2"]:checked ~ .slider-controls .slider-controls__control[for="slide-2"]::after,
+.slider-controls__radio[id="slide-3"]:checked ~ .slider-controls .slider-controls__control[for="slide-3"]::after {
+    display: block;
+}
+
+.slider-controls__radio[id="slide-1"]:checked ~ .promo-slider__slide_number_1,
+.slider-controls__radio[id="slide-2"]:checked ~ .promo-slider__slide_number_2,
+.slider-controls__radio[id="slide-3"]:checked ~ .promo-slider__slide_number_3 {
+    display: block;
+}
+
+.slider-controls__radio {
+    display: none;
 }
 
 /*Заголовок слайдера*/
@@ -183,15 +233,22 @@ h4 {
     color: #283136;
 }
 
+.promo-slider__paragraph span {
+    display: block;
+}
+
 .promo-slider__slide_number_1 {
     background: #eee url("../img/backgrounds/slide1.png") 431px bottom no-repeat;
+    display: none;
 }
 
 .promo-slider__slide_number_2 {
     background: #eee url("../img/backgrounds/slide2.png") 496px 0 no-repeat;
+    display: none;
 }
 .promo-slider__slide_number_3 {
     background: #eee url("../img/backgrounds/slide3.png") bottom right no-repeat;
+    display: none;
 }
 
 /*Блок преимуществ на главной странице*/
@@ -201,7 +258,6 @@ h4 {
     align-items: flex-start;
     margin-top: 80px;
     flex-wrap: wrap;
-    /*min-height: 429px;*/
     box-shadow: 0 2px 0 0 #eeeeee;
 }
 
@@ -237,7 +293,6 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /*min-height: 487px;*/
     margin-top: 42px;
     padding-bottom: 58px;
     position: relative;
@@ -341,7 +396,6 @@ h4 {
 /*Блок "Наши партнёры на главной странице"*/
 .our-partners {
     position: relative;
-    /*min-height: 137px;*/
     margin-top: 47px;
     padding-bottom: 44px;
     box-shadow: 0 2px 0 0 #eee;
