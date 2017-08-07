@@ -1334,3 +1334,42 @@ h4 {
     padding-left: 13px;
     padding-top: 11px;
 }
+
+/*Анимация модального окна*/
+@keyframes grow {
+    0% {
+        transform: translateX(-100%) scale(0.01);
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    75% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shaking {
+    0% {
+        transform: translateX(-52.5%);
+    }
+
+    25% {
+        transform: translateX(-47.5%);
+    }
+
+    50% {
+        transform: translateX(-52.5%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
