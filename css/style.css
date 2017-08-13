@@ -1242,15 +1242,14 @@ h4 {
     background-color: #fff;
     z-index: 40;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .write-us__inner {
     width: 960px;
     height: 590px;
     padding: 0 100px;
-    outline: 1px solid saddlebrown;
-    bottom: 180px;
 }
 
 .write-us__heading {
@@ -1338,7 +1337,7 @@ h4 {
 /*Анимация модального окна*/
 @keyframes grow {
     0% {
-        transform: translateX(-100%) scale(0.01);
+        transform: translate(-100%, -30%) scale(0.01);
         opacity: 0.1;
     }
 
@@ -1351,25 +1350,33 @@ h4 {
     }
 
     100% {
-        transform: translateX(-50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
 }
 
 @keyframes shaking {
     0% {
-        transform: translateX(-52.5%);
+        transform: translate(-52.5%, -50%);
     }
 
     25% {
-        transform: translateX(-47.5%);
+        transform: translate(-47.5%, -50%);
     }
 
     50% {
-        transform: translateX(-52.5%);
+        transform: translate(-52.5%, -50%);
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
     }
+}
+
+.shaking {
+    animation: shaking 0.5s;
+}
+
+.grow {
+    animation: grow 0.5s;
 }

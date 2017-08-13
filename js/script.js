@@ -1,23 +1,5 @@
 'use strict';
 
-/*Яндекс карта*/
-ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [59.93918106, 30.32160450],
-            zoom: 17,
-            controls: []
-        }, {}),
-
-        myPlacemark = new ymaps.Placemark([59.938801, 30.323195], {}, {
-            iconLayout: 'default#image',
-            iconImageHref: 'img/map/map-marker.png',
-            iconImageSize: [231, 190],
-            iconImageOffset: [-48, -190]
-        });
-
-    myMap.geoObjects.add(myPlacemark);
-});
-
 // Скрипт модального окна
 window.modal = (function () {
     // Модальное окно
@@ -53,10 +35,18 @@ window.modal = (function () {
     var onWriteUsButtonClick = function (event) {
         event.preventDefault();
         modalWindow.style.display = 'block';
-        modalWindowContent.style.animation = 'grow 0.4s';
+        modalWindowContent.classList.add('grow');
+        //modalWindowContent.style.animation = 'grow 0.4s';
         modalWindowContent.style.display = 'block';
-        writeUsCloseBtn.addEventListener('click', onWriteUsCloseBtnClick);
-        writeUsForm.addEventListener('submit', onWriteUsSubmit);
+        writeUsCloseBtn.addEventListener('click', onWriteUsCloseBtnClick, false);
+        writeUsForm.addEventListener('submit', onWriteUsSubmit, false);
+        writeUsForm.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13 && numberOfFilledFields < 3) {
+                modalWindowContent.classList.remove('shaking');
+                modalWindowContent.classList.add('shaking');
+            }
+        });
+       // writeUsForm.addEventListener('submit', startShakingAnimation, false);
     };
 
     /**
@@ -68,7 +58,7 @@ window.modal = (function () {
         event.preventDefault();
         modalWindow.style.display = 'none';
         writeUsCloseBtn.removeEventListener('click', onWriteUsCloseBtnClick);
-        writeUsForm.removeEventListener('submit', onWriteUsSubmit);
+       // writeUsForm.removeEventListener('submit', onWriteUsSubmit);
     };
 
     /**
@@ -82,6 +72,7 @@ window.modal = (function () {
         if (inputField.value === '') {
             inputField.style.borderColor = '#f00';
             inputFieldLabel.style.color = '#f00';
+            console.log('empty field fired');
         } else {
             numberOfFilledFields++;
         }
@@ -95,13 +86,33 @@ window.modal = (function () {
     var onWriteUsSubmit = function (event) {
         numberOfFilledFields = 0;
         event.preventDefault();
+        modalWindowContent.classList.remove('shaking');
         testFieldNotEmpty(event, userNameInput, userNameInputLabel);
         testFieldNotEmpty(event, userEmailInput, userEmailInputLabel);
         testFieldNotEmpty(event, userTextInput, userTextInputLabel);
         if (numberOfFilledFields === 3) {
             writeUsForm.submit();
         } else {
-            modalWindowContent.style.animation = 'shaking 0.5s';
+            modalWindowContent.style.animation = '';
+            modalWindowContent.classList.remove('grow');
+            modalWindowContent.classList.add('shaking');
+            //modalWindowContent.style.animation = 'shaking 0.5s';
+           //  modalWindowContent.classList.add('shaking');
+           //  console.log('class added');
+        }
+    };
+
+    function tre() {
+        modalWindowContent.classList.remove('shaking');
+    }
+
+    var startShakingAnimation = function () {
+        if (numberOfFilledFields < 3) {
+            modalWindowContent.classList.add('shaking');
+           // modalWindowContent.style.animation = 'shaking 0.5s';
+        }
+        else {
+            tre();
         }
     };
 
@@ -114,3 +125,21 @@ window.modal = (function () {
 })();
 
 window.modal.initialize();
+
+/*Яндекс карта*/
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.93918106, 30.32160450],
+            zoom: 17,
+            controls: []
+        }, {}),
+
+        myPlacemark = new ymaps.Placemark([59.938801, 30.323195], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map/map-marker.png',
+            iconImageSize: [231, 190],
+            iconImageOffset: [-48, -190]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+});
